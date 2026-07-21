@@ -13,3 +13,7 @@ RUN BACKOFFS="10 20 30 60 90" && for i in 1 2 3 4 5; do HF_TOKEN=$HF_TOKEN comfy
 
 # copy all input data (like images or videos) into comfyui (uncomment and adjust if needed)
 # COPY input/ /comfyui/input/
+
+# user-provided inputs override the auto-generated placeholders above.
+RUN wget --progress=dot:giga -O '/comfyui/input/dbb0e2e7d547e97abd4a20160bc339ab2e2d3d88acec29fa250ffdf101ecdbaa.png' "https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*"
+RUN wget --progress=dot:giga -O '/comfyui/input/b3d96e5295401c16dffdf813bce1989edac363ac6a27d3ff25359516ebca67f3.jpg' "https://hips.hearstapps.com/clv.h-cdn.co/assets/16/18/gettyimages-529202089.jpg?crop=0.6668237511781339xw:1xh;center,top"
